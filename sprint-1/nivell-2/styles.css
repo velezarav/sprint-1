@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+html {
+    max-width:1200px;
+    margin: auto;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    justify-content: center;
+    background-image: url("img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: 150% cover;
+    background-position: center 52%;
+    margin: 0 1em;
+    height: 24em;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+#nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:space-around;
+    flex: 4;
+}
+
+.nav-option > a {
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-option > a:hover {
+    animation-name: navbar-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.nav-option > i {
+    align-self: flex-start;
+}
+
+.nav-option > a > p {
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: flex-end;
+    margin-left: 0.5em;
+}
+
+#logo {
+    flex: 1;
+}
+
+#logo > img {
+    animation: logo-ani 3s ease;
+}
+
+#social {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+
+#social > a {
+    color: gray;
+    margin: 0.5em;
+    margin-right: 1em;
+}
+
+#social > a:hover {
+    color: indianred;
+}
+
+#title-banner {
+    align-self: flex-end;
+    background: rgb(128,128,128, 0.15);
+    text-align: center;
+    width: 80%;
+}
+
+#title-banner > h1 {
+    padding-bottom: 2.5em;
+    padding-top: 1.2em;
+    font-family: Garamond, Georgia, Times, 'Times New Roman', serif;
+    color: #F49B7A;
+    color: rgba(244, 155, 122, 0.7);
+    font-weight: lighter;
+    font-size: 1.8em;
+}
+
+#title-banner > h1:hover {
+    animation: title-ani 3s ease;
+}
+
+main {
+    display: flex;
+    margin: 0.5em 1em;
+    flex-wrap: wrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+article {
+    background-color: #D8D7D7;
+    display: flex;
+    flex: 4;
+    flex-wrap: wrap;
+}
+
+.sub-articles {
+    margin: 0.6em;
+    flex: 1 1 45%;
+    flex-wrap: wrap;
+    background-color: #F5F1F1;
+    padding: 0.66em;
+}
+
+.article-imagen {
+    height: 12em;
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+}
+
+.article-imagen > p {
+    color: #F0E68C;
+    align-self:flex-end;
+}
+.article-title {
+    background-color: #F08080;
+    margin: 0.3em 0;
+    padding: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+.article-title > h2 {
+    color: #F5F1F1;
+    margin-top:  0.2em;
+    font-weight: lighter;
+    letter-spacing: 0.05em;
+    font-size: 1.5em;
+}
+
+.leer-mas {
+    margin-top: 1em;
+}
+
+.leer-mas > a {
+    text-decoration: none;
+    color: gray;
+}
+
+.leer-mas > a:hover {
+    color: indianred;
+}
+
+.cultura {
+    background-image: url(img/sakura.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.gastronomia {
+    background-image: url(img/comida.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+.turismo {
+    background-image: url(img/fuji.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+.vida-nocturna {
+    background-image: url(img/noche.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+.article-text {
+    color: #535353;
+    column-count: 2;
+    margin-top: 1em;
+}
+
+#epigrafe {
+    color: #222222;
+    text-align: center;
+    padding: 1em;
+}
+
+aside {
+    flex: 1;
+    background-color: #D8D7D7;
+    margin-left: 0.6em;
+    padding: 1em;
+    text-align: center;
+    color: #222222;
+}
+
+aside > h3 {
+    margin: 1em;
+}
+
+footer {
+    background-color: #F5F1F1;
+    border-color: #D8D7D7;
+    border-style: none solid;
+    border-width: 1em;
+    padding: 1em;
+    margin: 1em;
+    margin-top: 0;
+}
+
+footer > p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+
+    aside > h3 {
+        margin: 0.5em;
+    }
+
+}
+
+@media (max-width: 600px) {
+    
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #logo {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1em;
+        padding-bottom: 1em;
+        border-bottom: rgb(185, 181, 181, 0.3) solid;
+    }
+
+    #nav-bar {
+        flex: 1 1 100%;
+    }
+
+    #social {
+        flex: 1 1 100%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        margin: 1em;
+        border-top: rgb(185, 181, 181, 0.3) solid;
+
+    }
+    
+    main {
+        flex-direction: column;
+    }
+
+    .article-text {
+        column-count: 1;
+    }
+
+    aside {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+
+    aside > h3 {
+        margin: 0.5em;
+    }
+}
+
+@keyframes logo-ani {
+    0% {
+        opacity: 0;
+        transform: scale(0);    
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes navbar-animation {
+    0% {
+        color: indianred;
+        transform: scale(1);
+    }
+
+    25% {
+        color: rgb(207, 138, 138);
+    }
+
+    50% {
+        color: lightcoral;
+        transform: scale(1.1);
+    }
+
+    100% {
+        color: rgb(143, 77, 77);
+        transform: scale(1);
+    }
+}
+
+@keyframes title-ani {
+    0% {
+        color: indianred;
+    }
+
+    30% {
+        color: lightcoral;    }
+
+    100% {
+        color: navajowhite;
+    }
+}

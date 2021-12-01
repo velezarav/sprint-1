@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    max-width:1200px;
+    margin: auto;
+    background-color: white;
+}
+
+header {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 15px;
+    height: 100%;
+}
+
+header > nav {
+    background-color: #2C4059;
+    display: flex;
+    margin: 5px;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+}
+
+header > nav > div {
+    background-color: #EB5455;
+    margin: 12.5px;
+    justify-content: space-evenly;
+    height: 20px;
+    flex: 1;
+}
+
+#superior-item {
+    flex: 4;
+}
+
+header > .header-inferior {
+    background-color: #F07B3E;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+}
+
+header > .header-inferior > div {
+    background-color: #FDD460;
+    height: 20px;
+    margin: 12.5px;
+}
+
+main {
+    background-color: black;
+    padding: 15px;
+    margin: 20px;
+    display: flex;
+
+}
+
+main > article {
+    background-color: #4E4E6A;
+    flex: 2.55;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 5px 15px 5px 5px;
+}
+
+main > article > div {
+    background-color: #1F6CB0;
+    height: 20px;
+    margin: 10px;
+    flex: 1 0 33%;
+}
+
+#izquierda-item {
+    background-color: #6FA3C4;
+}
+
+main > aside {
+    background-color: #F73F52;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    padding: 20px;
+    margin: 5px;
+}
+
+main > aside > div {
+    background-color: #FEEA85;
+    height: 20px;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+}
+
+footer {
+    background-color: #E6AE2D;
+    border: 20px solid black;
+    margin: 20px;
+}
+
+footer > div {
+    height: 20px;
+}
+
+@media (max-width:768px) {
+    main {
+        flex-direction:column;
+        background-color: #FEFF01;
+    }
+    main > article {
+        margin: 5px;
+    }
+    main > aside {
+        align-items: center;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    main > aside > div {
+        margin: 10px;
+    }
+  }
+
+@media (max-width: 600px) {
+    header > nav {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    #superior-item {
+        flex: 1 1 100%;
+    }
+
+    main {
+        flex-direction:column;
+        background-color: #FEE228
+    }
+
+    main > article {
+        flex-wrap: wrap;
+        margin: 5px;
+        background-color: #09506F;
+        margin-bottom: 20px;
+    }
+
+    #izquierda-item {
+        flex: 1 1 100%;
+        background-color: #A3DDCB;
+    }
+
+    main > article > div {
+        background-color: #61959C;
+        flex: 1 1 100%;
+    }
+
+    main > aside {
+        background-color: #FD7B54;
+        align-content: space-between;
+    }
+
+    main > aside > div {
+        background-color: #FDB36B;
+        margin: 10px;
+    }
+
+}

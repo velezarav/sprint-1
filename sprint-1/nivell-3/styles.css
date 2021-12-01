@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+html {
+    max-width:1200px;
+    margin: auto;
+    background-color: white;
+}
+
+header {
+    display: grid;
+    padding: 0 1em;
+    margin: 0 1em;
+    height: 24em;
+    grid-template-areas: "logo navbar navbar navbar navbar social"
+                        ". banner banner banner banner .";
+    background-image: url("img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: 150% cover;
+    background-position: center 52%;
+    justify-content: space-around;
+}
+
+#nav-bar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    align-items: center;
+    margin-left: 5em;
+}
+
+.nav-option {
+    display: grid;
+    grid-template-areas: "icono item item";
+    margin: 1em;
+}
+
+#nav-bar > a {
+    text-decoration: none;
+    color: gray;
+}
+
+.nav-option > p {
+    grid-area: item;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    margin-left: 0.5em;
+}
+
+.nav-option > i {
+    grid-area: icono;
+    color: gray;
+}
+
+.nav-option:hover {
+    animation-name: navbar-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+
+
+#logo {
+    grid-area: logo; 
+    margin-left: auto;
+    justify-self: start;
+    align-self: center;
+}
+
+#logo > img {
+    animation: logo-ani 3s ease;
+}
+
+#social {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+}
+
+
+#social > a {
+    color: gray;
+    margin: 0.5em;
+    margin-right: 1em;
+}
+
+#social > a:hover {
+    color: indianred;
+}
+
+#title-banner {
+    grid-area: banner;
+    background: rgb(128,128,128, 0.15);
+    text-align: center;
+}
+
+#title-banner > h1 {
+    padding-bottom: 2.5em;
+    padding-top: 1.2em;
+    font-family: Garamond, Georgia, Times, 'Times New Roman', serif;
+    color: #F49B7A;
+    color: rgba(244, 155, 122, 0.7);
+    font-weight: lighter;
+    font-size: 1.8em;
+}
+
+#title-banner > h1:hover {
+    animation: title-ani 3s ease;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "article article article aside";
+    margin: 0.5em 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+article {
+    background-color: #D8D7D7;
+    grid-area: article;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.sub-articles {
+    margin: 0.6em;
+    background-color: #F5F1F1;
+    padding: 0.66em;
+}
+
+.article-imagen {
+    height: 12em;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.article-imagen > p {
+    color: #F0E68C;
+    margin-top: 10em;
+    margin-bottom: 1em;
+}
+.article-title {
+    background-color: #F08080;
+    margin: 0.3em 0;
+    padding: 0.5em;
+    padding-bottom: 0.2em;
+}
+
+.article-title > h2 {
+    color: #F5F1F1;
+    margin-top:  0.2em;
+    font-weight: lighter;
+    letter-spacing: 0.05em;
+    font-size: 1.5em;
+}
+
+.leer-mas {
+    margin-top: 1em;
+}
+
+.leer-mas > a {
+    text-decoration: none;
+    color: gray;
+}
+
+.leer-mas > a:hover {
+    color: indianred;
+}
+
+.cultura {
+    background-image: url(img/sakura.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.gastronomia {
+    background-image: url(img/comida.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+.turismo {
+    background-image: url(img/fuji.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+.vida-nocturna {
+    background-image: url(img/noche.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+.article-text {
+    color: #535353;
+    column-count: 2;
+    margin-top: 1em;
+}
+
+#epigrafe {
+    grid-column: 1 / -1;
+    color: #222222;
+    text-align: center;
+    padding: 1em;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #D8D7D7;
+    margin-left: 0.6em;
+    padding: 1em;
+    text-align: center;
+    color: #222222;
+}
+
+aside > h3 {
+    margin: 1em;
+}
+
+footer {
+    background-color: #F5F1F1;
+    border-color: #D8D7D7;
+    border-style: none solid;
+    border-width: 1em;
+    padding: 1em;
+    margin: 1em;
+    margin-top: 0;
+}
+
+footer > p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-areas: "logo"
+        "navbar"
+        "social"
+        "banner";
+        justify-items: center;
+        margin: 0.5em;    
+    }
+
+    #logo {
+        grid-area: logo; 
+        margin-left: 0;
+        margin-top: 2em;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #nav-bar {
+        grid-area: navbar;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        /* width: 100%;
+        justify-self: center;
+        margin: auto; */
+        justify-self: center;
+    }
+
+    main {
+        grid-template-areas: "article"
+        "article"
+        "article"
+        "article"
+        "article"
+        "article"
+        "article"
+        "article"
+        "aside";
+        margin: 0.5em;
+    }
+    article {
+        grid-area: article;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;    
+    }
+
+
+    aside {
+        grid-area: aside;
+        grid-row: -2 / -1;
+        margin-left: 0;
+        margin-top: 0.5em;
+
+    }
+
+    aside > h3 {
+        margin: 0em;
+        margin-bottom: 0.5em;
+    }
+
+    footer {
+        margin: 0.5em;
+    }
+
+}
+
+@media (max-width: 600px) {
+    header {
+        grid-template-rows: repeat(10fr);
+            grid-template-columns: 1fr;
+            height: auto;
+    }
+
+    #title-banner {
+        grid-row: -3 /-1;
+        margin: 0 1em;
+        padding-bottom: 0em;
+        width: 50%;
+    }
+    #title-banner > h1 {
+        font-size: 1.8em;
+    }
+
+    #nav-bar {
+        grid-area: navbar;
+        grid-template-rows: 5fr;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        /* width: 100%;
+        justify-self: center;
+        margin: auto; */
+    }
+
+    #nav-bar > a {
+        width: 100%;
+    }
+    
+
+    .article-text {
+        column-count: 1;
+    }
+}
+
+@keyframes logo-ani {
+    0% {
+        opacity: 0;
+        transform: scale(0);    
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes navbar-animation {
+    0% {
+        color: indianred;
+        transform: scale(1);
+    }
+
+    25% {
+        color: rgb(207, 138, 138);
+    }
+
+    50% {
+        color: lightcoral;
+        transform: scale(1.1);
+    }
+
+    100% {
+        color: rgb(143, 77, 77);
+        transform: scale(1);
+    }
+}
+
+@keyframes title-ani {
+    0% {
+        color: indianred;
+    }
+
+    30% {
+        color: lightcoral;    }
+
+    100% {
+        color: navajowhite;
+    }
+}
