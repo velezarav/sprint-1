@@ -1,2 +1,3 @@
-# sprint1
-front end react - sprint 1 - nivell 1, 2 i 3
+# IT ACADEMY - SPRINT 1 - HTML/CSS
+
+Ejercicios sobre maquetación en HTML con CSS.
